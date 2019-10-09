@@ -11,11 +11,13 @@ package ripasso_thread;
  */
 public class Ripasso_thread {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+     public static void main(String[] args) 
+     {
+            Storage st = new Storage();
+            Counter c = new Counter(st);
+            Printer p = new Printer(st);
+            new Thread( c,"Counter").start();  
+            new Thread( p,"Printer").start();   
+      }
     
 }
