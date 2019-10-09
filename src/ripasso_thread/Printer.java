@@ -21,8 +21,8 @@ class Printer implements  Runnable  {
     @Override
     public void run() 
     {
-         int counter = 0;
-            while (counter < 50000000-1) 
+         int counter = 0;    
+            while (true) 
          {
              counter=s.get();
             System.out.println(counter); 

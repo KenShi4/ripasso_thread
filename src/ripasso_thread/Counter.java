@@ -18,7 +18,7 @@ class Counter implements  Runnable {
 
     @Override
     public void run() {
-        for(int i = 0 ; i < 50000000; i++){
+        for(int i = 0 ; ; i++){
             s.set(i);
         }
         
