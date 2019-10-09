@@ -10,5 +10,11 @@ package ripasso_thread;
  * @author informatica
  */
 class Storage {
-    
+     int  i;
+      public void set(int i){  
+            this.i = i;                           
+      }
+      public  int get(){
+            return this.i;
+      }
 }

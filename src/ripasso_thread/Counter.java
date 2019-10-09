@@ -10,14 +10,20 @@ package ripasso_thread;
  * @author informaticas
  */
 class Counter implements  Runnable {
-
-    Counter(Storage st) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       Storage s;
+ 
+    public Counter(Storage s) {
+        this.s=s;
     }
 
     @Override
     public void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(int i = 0 ; i < 50000000; i++){
+            s.set(i);
+        }
+        
     }
-    
 }
+ 
+    
+

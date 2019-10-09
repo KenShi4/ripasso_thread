@@ -18,17 +18,15 @@ class Printer implements  Runnable  {
        this.s = s;
     }
 
-
     @Override
     public void run() 
     {
          int counter = 0;
-         
-            while (counter < 200) 
+            while (counter < 50000000-1) 
          {
-           
-            System.out.println(Thread.currentThread().getName() + " " + (counter=s.get())); 
+             counter=s.get();
+            System.out.println(counter); 
+            
          }
     }
-    
 }
