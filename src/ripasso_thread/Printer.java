@@ -11,14 +11,24 @@ package ripasso_thread;
  */
 class Printer implements  Runnable  {
 
-    Printer(Storage st) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    Storage s;
+
+    Printer(Storage s) 
+    {
+       this.s = s;
     }
 
 
     @Override
-    public void run() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void run() 
+    {
+         int counter = 0;
+         
+            while (counter < 200) 
+         {
+           
+            System.out.println(Thread.currentThread().getName() + " " + (counter=s.get())); 
+         }
     }
     
 }
